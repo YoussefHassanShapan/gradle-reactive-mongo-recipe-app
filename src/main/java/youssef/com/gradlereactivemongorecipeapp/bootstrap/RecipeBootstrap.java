@@ -1,9 +1,7 @@
 package youssef.com.gradlereactivemongorecipeapp.bootstrap;
 
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationListener;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,10 +9,6 @@ import youssef.com.gradlereactivemongorecipeapp.domain.*;
 import youssef.com.gradlereactivemongorecipeapp.repositories.CategoryRepository;
 import youssef.com.gradlereactivemongorecipeapp.repositories.RecipeRepository;
 import youssef.com.gradlereactivemongorecipeapp.repositories.UnitOfMeasureRepository;
-//import youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos.CategoryReactiveRepository;
-//import youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos.RecipeReactiveRepository;
-//import youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos.UnitOfMeasureReactiveRepository;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +16,6 @@ import java.util.Optional;
 
 @Slf4j
 @Component
-//@ComponentScan("youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos")
 public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
     private final CategoryRepository categoryRepository;
@@ -42,7 +35,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         loadCategories();
         loadUom();
-        recipeRepository.saveAll(getRecipes());
+            recipeRepository.saveAll(getRecipes());
         log.debug("Loading Bootstrap Data");
 
     }
@@ -104,8 +97,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         List<Recipe> recipes = new ArrayList<>(2);
 
         //get UOMs
-        Optional<UnitOfMeasure> eachUomOptional =
-                unitOfMeasureRepository.findByDescription("Each");
+        Optional<UnitOfMeasure> eachUomOptional = unitOfMeasureRepository.findByDescription("Each");
 
         if(!eachUomOptional.isPresent()){
             throw new RuntimeException("Expected UOM Not Found");
