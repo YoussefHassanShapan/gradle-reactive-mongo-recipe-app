@@ -1,15 +1,13 @@
 package youssef.com.gradlereactivemongorecipeapp.converters;
 
-import guru.springframework.commands.IngredientCommand;
-import guru.springframework.domain.Ingredient;
-import guru.springframework.domain.Recipe;
-import org.springframework.core.convert.converter.Converter;
-import org.springframework.lang.Nullable;
-import org.springframework.stereotype.Component;
 
-/**
- * Created by jt on 6/21/17.
- */
+import io.micrometer.common.lang.Nullable;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
+import youssef.com.gradlereactivemongorecipeapp.commands.IngredientCommand;
+import youssef.com.gradlereactivemongorecipeapp.domain.Ingredient;
+import youssef.com.gradlereactivemongorecipeapp.domain.Recipe;
+
 @Component
 public class IngredientCommandToIngredient implements Converter<IngredientCommand, Ingredient> {
 

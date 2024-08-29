@@ -1,13 +1,11 @@
 package youssef.com.gradlereactivemongorecipeapp.services;
 
-import guru.springframework.commands.RecipeCommand;
-import guru.springframework.domain.Recipe;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import youssef.com.gradlereactivemongorecipeapp.commands.RecipeCommand;
+import youssef.com.gradlereactivemongorecipeapp.domain.Recipe;
 
-/**
- * Created by jt on 6/13/17.
- */
 public interface RecipeService {
 
     Flux<Recipe> getRecipes();

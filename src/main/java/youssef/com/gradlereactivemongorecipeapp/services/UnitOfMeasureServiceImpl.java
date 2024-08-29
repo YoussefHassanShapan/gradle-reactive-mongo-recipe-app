@@ -1,14 +1,12 @@
 package youssef.com.gradlereactivemongorecipeapp.services;
 
-import guru.springframework.commands.UnitOfMeasureCommand;
-import guru.springframework.converters.UnitOfMeasureToUnitOfMeasureCommand;
-import guru.springframework.repositories.reactive.UnitOfMeasureReactiveRepository;
+
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
+import youssef.com.gradlereactivemongorecipeapp.commands.UnitOfMeasureCommand;
+import youssef.com.gradlereactivemongorecipeapp.converters.UnitOfMeasureToUnitOfMeasureCommand;
+import youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos.UnitOfMeasureReactiveRepository;
 
-/**
- * Created by jt on 6/28/17.
- */
 @Service
 public class UnitOfMeasureServiceImpl implements UnitOfMeasureService {
 

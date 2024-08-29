@@ -1,10 +1,8 @@
 package youssef.com.gradlereactivemongorecipeapp.repositories;
 
-import guru.springframework.domain.Recipe;
-import org.springframework.data.repository.CrudRepository;
 
-/**
- * Created by jt on 6/13/17.
- */
+import org.springframework.data.repository.CrudRepository;
+import youssef.com.gradlereactivemongorecipeapp.domain.Recipe;
+
 public interface RecipeRepository extends CrudRepository<Recipe, String> {
 }

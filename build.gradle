@@ -34,6 +34,16 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.webjars:bootstrap:5.3.0'
+    implementation 'org.webjars:jquery:3.6.0'
+    // Bean Validation API
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+
+    // Hibernate Validator (Reference Implementation of Bean Validation API)
+    implementation 'org.hibernate.validator:hibernate-validator:6.2.0.Final'
+
+    // If you're using Java 11 or later, you might need this:
+    implementation 'org.glassfish:javax.el:3.0.0'
 }
 
 tasks.named('test') {

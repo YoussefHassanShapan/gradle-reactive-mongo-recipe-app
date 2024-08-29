@@ -1,18 +1,16 @@
 package youssef.com.gradlereactivemongorecipeapp.converters;
 
-import guru.springframework.commands.RecipeCommand;
-import guru.springframework.domain.Category;
-import guru.springframework.domain.Recipe;
+
+import io.micrometer.common.lang.Nullable;
 import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
+import youssef.com.gradlereactivemongorecipeapp.commands.RecipeCommand;
+import youssef.com.gradlereactivemongorecipeapp.domain.Category;
+import youssef.com.gradlereactivemongorecipeapp.domain.Recipe;
 
-/**
- * Created by jt on 6/21/17.
- */
 @Component
-public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand>{
+public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand> {
 
     private final CategoryToCategoryCommand categoryConveter;
     private final IngredientToIngredientCommand ingredientConverter;
@@ -38,7 +36,7 @@ public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand>{
         command.setCookTime(source.getCookTime());
         command.setPrepTime(source.getPrepTime());
         command.setDescription(source.getDescription());
-        command.setDifficulty(source.getDifficulty());
+        //command.setDifficulty(source.getDifficulty());
         command.setDirections(source.getDirections());
         command.setServings(source.getServings());
         command.setSource(source.getSource());

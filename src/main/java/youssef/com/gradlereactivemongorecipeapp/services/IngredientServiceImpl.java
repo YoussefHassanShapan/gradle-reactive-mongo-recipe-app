@@ -1,21 +1,18 @@
 package youssef.com.gradlereactivemongorecipeapp.services;
 
-import guru.springframework.commands.IngredientCommand;
-import guru.springframework.converters.IngredientCommandToIngredient;
-import guru.springframework.converters.IngredientToIngredientCommand;
-import guru.springframework.domain.Ingredient;
-import guru.springframework.domain.Recipe;
-import guru.springframework.repositories.reactive.RecipeReactiveRepository;
-import guru.springframework.repositories.reactive.UnitOfMeasureReactiveRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
+import youssef.com.gradlereactivemongorecipeapp.commands.IngredientCommand;
+import youssef.com.gradlereactivemongorecipeapp.converters.IngredientCommandToIngredient;
+import youssef.com.gradlereactivemongorecipeapp.converters.IngredientToIngredientCommand;
+import youssef.com.gradlereactivemongorecipeapp.domain.Ingredient;
+import youssef.com.gradlereactivemongorecipeapp.domain.Recipe;
+import youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos.RecipeReactiveRepository;
+import youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos.UnitOfMeasureReactiveRepository;
 
 import java.util.Optional;
 
-/**
- * Created by jt on 6/28/17.
- */
 @Slf4j
 @Service
 public class IngredientServiceImpl implements IngredientService {

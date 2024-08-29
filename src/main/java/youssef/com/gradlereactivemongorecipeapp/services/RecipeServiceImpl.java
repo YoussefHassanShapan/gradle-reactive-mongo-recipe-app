@@ -1,18 +1,16 @@
 package youssef.com.gradlereactivemongorecipeapp.services;
 
-import guru.springframework.commands.RecipeCommand;
-import guru.springframework.converters.RecipeCommandToRecipe;
-import guru.springframework.converters.RecipeToRecipeCommand;
-import guru.springframework.domain.Recipe;
-import guru.springframework.repositories.reactive.RecipeReactiveRepository;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import youssef.com.gradlereactivemongorecipeapp.commands.RecipeCommand;
+import youssef.com.gradlereactivemongorecipeapp.converters.RecipeCommandToRecipe;
+import youssef.com.gradlereactivemongorecipeapp.converters.RecipeToRecipeCommand;
+import youssef.com.gradlereactivemongorecipeapp.domain.Recipe;
+import youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos.RecipeReactiveRepository;
 
-/**
- * Created by jt on 6/13/17.
- */
 @Slf4j
 @Service
 public class RecipeServiceImpl implements RecipeService {

@@ -1,11 +1,9 @@
 package youssef.com.gradlereactivemongorecipeapp.services;
 
-import guru.springframework.commands.IngredientCommand;
-import reactor.core.publisher.Mono;
 
-/**
- * Created by jt on 6/27/17.
- */
+import reactor.core.publisher.Mono;
+import youssef.com.gradlereactivemongorecipeapp.commands.IngredientCommand;
+
 public interface IngredientService {
 
     Mono<IngredientCommand> findByRecipeIdAndIngredientId(String recipeId, String ingredientId);

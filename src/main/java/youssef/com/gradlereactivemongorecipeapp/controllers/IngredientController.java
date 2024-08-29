@@ -1,11 +1,6 @@
 package youssef.com.gradlereactivemongorecipeapp.controllers;
 
-import guru.springframework.commands.IngredientCommand;
-import guru.springframework.commands.RecipeCommand;
-import guru.springframework.commands.UnitOfMeasureCommand;
-import guru.springframework.services.IngredientService;
-import guru.springframework.services.RecipeService;
-import guru.springframework.services.UnitOfMeasureService;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,10 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import youssef.com.gradlereactivemongorecipeapp.commands.IngredientCommand;
+import youssef.com.gradlereactivemongorecipeapp.commands.RecipeCommand;
+import youssef.com.gradlereactivemongorecipeapp.commands.UnitOfMeasureCommand;
+import youssef.com.gradlereactivemongorecipeapp.services.IngredientService;
+import youssef.com.gradlereactivemongorecipeapp.services.RecipeService;
+import youssef.com.gradlereactivemongorecipeapp.services.UnitOfMeasureService;
 
-/**
- * Created by jt on 6/28/17.
- */
 @Slf4j
 @Controller
 public class IngredientController {

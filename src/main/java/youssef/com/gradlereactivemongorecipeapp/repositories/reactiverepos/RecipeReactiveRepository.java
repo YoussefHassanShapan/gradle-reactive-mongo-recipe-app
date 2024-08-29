@@ -1,10 +1,9 @@
 package youssef.com.gradlereactivemongorecipeapp.repositories.reactiverepos;
 
-import guru.springframework.domain.Recipe;
-import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
-/**
- * Created by jt on 8/17/17.
- */
-public interface RecipeReactiveRepository extends ReactiveMongoRepository<Recipe, String>{
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import youssef.com.gradlereactivemongorecipeapp.domain.Recipe;
+
+public interface RecipeReactiveRepository extends ReactiveMongoRepository<Recipe, String> {
+
 }

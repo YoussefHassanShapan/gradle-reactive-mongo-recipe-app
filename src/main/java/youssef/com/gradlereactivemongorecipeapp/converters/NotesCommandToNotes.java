@@ -1,15 +1,13 @@
 package youssef.com.gradlereactivemongorecipeapp.converters;
 
-import guru.springframework.commands.NotesCommand;
-import guru.springframework.domain.Notes;
+
 import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
+import youssef.com.gradlereactivemongorecipeapp.commands.NotesCommand;
+import youssef.com.gradlereactivemongorecipeapp.domain.Notes;
+import io.micrometer.common.lang.Nullable;
 
-/**
- * Created by jt on 6/21/17.
- */
 @Component
 public class NotesCommandToNotes implements Converter<NotesCommand, Notes> {
 

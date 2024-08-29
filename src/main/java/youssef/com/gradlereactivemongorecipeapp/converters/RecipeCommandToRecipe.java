@@ -1,15 +1,13 @@
 package youssef.com.gradlereactivemongorecipeapp.converters;
 
-import guru.springframework.commands.RecipeCommand;
-import guru.springframework.domain.Recipe;
+
 import lombok.Synchronized;
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
+import youssef.com.gradlereactivemongorecipeapp.commands.RecipeCommand;
+import youssef.com.gradlereactivemongorecipeapp.domain.Recipe;
+import io.micrometer.common.lang.Nullable;
 
-/**
- * Created by jt on 6/21/17.
- */
 @Component
 public class RecipeCommandToRecipe implements Converter<RecipeCommand, Recipe> {
 
@@ -37,7 +35,7 @@ public class RecipeCommandToRecipe implements Converter<RecipeCommand, Recipe> {
         recipe.setCookTime(source.getCookTime());
         recipe.setPrepTime(source.getPrepTime());
         recipe.setDescription(source.getDescription());
-        recipe.setDifficulty(source.getDifficulty());
+        //recipe.setDifficulty(source.getDifficulty());
         recipe.setDirections(source.getDirections());
         recipe.setServings(source.getServings());
         recipe.setSource(source.getSource());
